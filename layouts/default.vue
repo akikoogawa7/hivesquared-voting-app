@@ -4,14 +4,35 @@
       :clipped-left="clipped"
       fixed
       app
+      elevation="0"
+      color=white
     >
-      <v-toolbar-title v-text="title" />
+      <v-toolbar-title>
+        <v-img src="Logo.png" />
+      </v-toolbar-title>
       <v-spacer />
+      <v-toolbar-side-icon 
+          v-for="(item, i) in items"
+          :key="i"
+          :to="item.to"
+          router
+          exact
+          >
+          <v-list-item-action>
+            <v-icon>{{ item.icon }}</v-icon>
+          </v-list-item-action>
+      </v-toolbar-side-icon>
+          <v-avatar
+            color="accent"
+            size="48"
+          />
       <v-btn
         icon
         @click.stop="rightDrawer = !rightDrawer"
+        class="min-button"
+
       >
-        <v-icon>mdi-menu</v-icon>
+      <v-icon>mdi-chevron-down</v-icon>
       </v-btn>
     </v-app-bar>
     <v-main>
@@ -19,12 +40,26 @@
         <Nuxt />
       </v-container>
     </v-main>
-    <v-footer
-      :absolute="!fixed"
-      app
+    <v-bottom-navigation
+    app
+    elevation="0"
     >
-      <span>&copy; {{ new Date().getFullYear() }}</span>
-    </v-footer>
+    <v-row no-gutters justify="space-around">
+      <v-col 
+      class="d-flex justify-center"
+      v-for="(slide, i) in slides"
+      :key="i"
+      :to="slide.to"
+      router
+      exact
+      >
+      <v-list-item-action>
+        <v-icon @click="slide.to">{{ slide.icon }}</v-icon>
+          <v-list-item-title v-text="slide.title"/>
+      </v-list-item-action>
+      </v-col>
+    </v-row>
+    </v-bottom-navigation>
   </v-app>
 </template>
 
@@ -33,16 +68,24 @@ export default {
   data () {
     return {
       clipped: true,
+      fixed: false,
       items: [
         {
-          icon: 'mdi-apps',
-          title: 'Welcome',
-          to: '/'
+          icon: 'mdi-cog',
+          title: 'Settings',
+          to: '/settings'
+        }
+      ],
+      slides: [
+        {
+          icon: 'mdi-chevron-left',
+          title: 'Previous',
+          to: '/info'
         },
         {
-          icon: 'mdi-chart-bubble',
-          title: 'Inspire',
-          to: '/inspire'
+          icon: 'mdi-chevron-right',
+          title: 'Next',
+          to: '/vote'
         }
       ],
       miniVariant: false,
@@ -53,3 +96,9 @@ export default {
   }
 }
 </script>
+
+<style>
+.min-button::before {
+  display: none;
+}
+</style>
