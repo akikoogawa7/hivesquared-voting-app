@@ -3,20 +3,20 @@
   <v-row justify="center" align="center">
     <v-col cols="12" sm="8" md="6">
       <v-card elevation="0">
-      <v-progress-linear v-model="value" :indeterminate="query" :query="true"></v-progress-linear>
+        <v-progress-linear v-model="value" :indeterminate="query" :query="true"></v-progress-linear>
         <v-card-title>
-          Info
+          Results
         </v-card-title>
         <v-card-subtitle class="headline">
-          After Action Review
+          Yes, we should implement After Action Reviews
         </v-card-subtitle>
         <v-card-text>
-          <p>An after action review (AAR) is a structured review or de-brief (debriefing) process for analyzing what happened, why it happened, and how it can be done better by the participants and those responsible for the project or event. </p>
+          <p>This means we decided as a group to implement After Action Reviews.</p>
         </v-card-text>
       </v-card>
     </v-col>
     <v-col>
-      Image
+      Vote component
     </v-col>
   </v-row>
   <v-row>
@@ -25,7 +25,7 @@
     <v-btn
       color="primary"
       nuxt
-      to="/vote"
+      to="/finish"
     >
       Continue
     </v-btn>
@@ -38,8 +38,7 @@
 export default {
   data () {
     return {
-      value: 25,
-      query: false,
+      value: 100,
     }
   }
 }

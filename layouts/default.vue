@@ -40,26 +40,6 @@
         <Nuxt />
       </v-container>
     </v-main>
-    <v-bottom-navigation
-    app
-    elevation="0"
-    >
-    <v-row no-gutters justify="space-around">
-      <v-col 
-      class="d-flex justify-center"
-      v-for="(slide, i) in slides"
-      :key="i"
-      :to="slide.to"
-      router
-      exact
-      >
-      <v-list-item-action>
-        <v-icon @click="slide.to">{{ slide.icon }}</v-icon>
-          <v-list-item-title v-text="slide.title"/>
-      </v-list-item-action>
-      </v-col>
-    </v-row>
-    </v-bottom-navigation>
   </v-app>
 </template>
 
@@ -90,8 +70,7 @@ export default {
       ],
       miniVariant: false,
       right: true,
-      rightDrawer: false,
-      title: 'HiveSquared'
+      title: 'HiveSquared',
     }
   }
 }
