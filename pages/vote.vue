@@ -1,6 +1,6 @@
 <template>
 <v-container>
-  <v-col>
+  <v-col class="padding-bottom">
   <v-row justify="center" align="center">
     <v-col cols="12" sm="8" md="6">
       <v-card elevation="0">
@@ -15,7 +15,7 @@
           <h3>Should we implement After Action Reviews?</h3>
         </v-card-subtitle>
         <v-card-text>
-          <p>An after action review (AAR) is a structured review or de-brief (debriefing) process for analyzing what happened, why it happened, and how it can be done better by the participants and those responsible for the project or event. </p>
+          <p>We want your input on whether we should do after action reviews as a group after our projects end.</p>
         </v-card-text>
       </v-card>
     </v-col>
@@ -82,7 +82,10 @@ export default {
 </script>
 
 <style>
-.bottom-buttons {
-  padding-top: 11rem;
+.btn-style {
+  border-radius: 8px;
+}
+.padding-bottom {
+  margin-bottom: 10rem;
 }
 </style>

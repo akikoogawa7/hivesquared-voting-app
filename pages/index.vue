@@ -1,6 +1,6 @@
 <template>
 <v-container>
-  <v-col>
+  <v-col class="padding-bottom">
   <v-row justify="center" align="center">
     <v-col cols="12" sm="8" md="6">
       <v-card elevation="0">
@@ -24,7 +24,8 @@
     </v-col>
   </v-row>
   </v-col>
-  <v-row class="bottom-buttons">
+
+  <v-row>
     <v-col lg=6 md=4 sm=2 justify="left">
     <v-card-actions>
     <v-btn
@@ -45,6 +46,7 @@
       </v-list-item-title>
   </v-card-actions>
     </v-col>
+    
     <v-col lg=6 md=4 sm=2 justify="right">
     <v-card-actions>
       <v-list-item-title align="right">
@@ -82,10 +84,10 @@ export default {
 </script>
 
 <style>
-.bottom-buttons {
-  padding-top: 11rem;
-}
 .btn-style {
   border-radius: 8px;
+}
+.padding-bottom {
+  margin-bottom: 10rem;
 }
 </style>

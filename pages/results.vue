@@ -1,6 +1,6 @@
 <template>
 <v-container>
-  <v-col>
+  <v-col class="padding-bottom">
   <v-row justify="center" align="center">
     <v-col cols="12" sm="8" md="6">
       <v-card elevation="0">
@@ -82,7 +82,10 @@ export default {
 </script>
 
 <style>
-.bottom-buttons {
-  padding-top: 11rem;
+.btn-style {
+  border-radius: 8px;
+}
+.padding-bottom {
+  margin-bottom: 10rem;
 }
 </style>
