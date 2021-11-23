@@ -3,6 +3,9 @@
   <v-row justify="center" align="center">
     <v-col cols="12" sm="8" md="6">
       <v-card elevation="0">
+        <v-slide-item class="text-right pb-2">
+        <div>3/3</div>
+        </v-slide-item>
         <v-progress-linear v-model="value" :indeterminate="query" :query="true"></v-progress-linear>
         <v-card-title>
           Results
@@ -39,6 +42,7 @@ export default {
   data () {
     return {
       value: 100,
+      query: false,
     }
   }
 }

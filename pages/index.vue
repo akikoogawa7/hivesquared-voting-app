@@ -1,8 +1,12 @@
 <template>
 <v-container>
+  <v-col>
   <v-row justify="center" align="center">
     <v-col cols="12" sm="8" md="6">
       <v-card elevation="0">
+      <v-slide-item class="text-right pb-2">
+        <div>1/3</div>
+        </v-slide-item>
       <v-progress-linear v-model="value" :indeterminate="query" :query="true"></v-progress-linear>
         <v-card-title>
           Info
@@ -19,17 +23,31 @@
       Image
     </v-col>
   </v-row>
-  <v-row>
-      <v-card-actions>
+  </v-col>
+  <v-row class="bottom-buttons">
+    <v-col lg=6 md=4 sm=2 justify="left">
+    <v-card-actions>
+    <v-btn
+      color="primary"
+      nuxt
+      to="/"
+    >
+      <v-icon>mdi-chevron-left</v-icon>
+    </v-btn>
+  </v-card-actions>
+    </v-col>
+    <v-col lg=6 md=4 sm=2 justify="right">
+    <v-card-actions>
     <v-spacer />
     <v-btn
       color="primary"
       nuxt
       to="/vote"
     >
-      Continue
+      <v-icon>mdi-chevron-right</v-icon>
     </v-btn>
-  </v-card-actions>
+    </v-card-actions>
+    </v-col>
   </v-row>
 </v-container>
 </template>
@@ -44,3 +62,9 @@ export default {
   }
 }
 </script>
+
+<style>
+.bottom-buttons {
+  padding-top: 14rem;
+}
+</style>
