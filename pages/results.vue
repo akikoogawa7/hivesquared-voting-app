@@ -15,7 +15,7 @@
           <h3>Yes, we should implement After Action Reviews</h3>
         </v-card-subtitle>
         <v-card-text>
-          <p>An after action review (AAR) is a structured review or de-brief (debriefing) process for analyzing what happened, why it happened, and how it can be done better by the participants and those responsible for the project or event. </p>
+          <p>This means we decided as a group to implement After Action Reviews. </p>
         </v-card-text>
       </v-card>
     </v-col>

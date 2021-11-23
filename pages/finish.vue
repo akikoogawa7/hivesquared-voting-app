@@ -1,16 +1,13 @@
 <template>
 <v-container>
   <v-col class="padding-bottom">
+  <v-card-title>
+    Recorded Decisions
+  </v-card-title>
+    <v-divider />
   <v-row justify="center" align="center">
     <v-col cols="12" sm="8" md="6">
       <v-card elevation="0">
-      <v-slide-item class="text-right pb-2">
-        <div>3/3</div>
-        </v-slide-item>
-      <v-progress-linear v-model="value" :indeterminate="query" :query="true"></v-progress-linear>
-        <v-card-title>
-          Recorded Decisions
-        </v-card-title>
         <v-card-subtitle class="headline">
           <h3>Yes, we should implement After Action Reviews</h3>
         </v-card-subtitle>
@@ -23,6 +20,8 @@
       Image
     </v-col>
   </v-row>
+  <v-divider />
+
   </v-col>
   <v-row class="bottom-buttons">
     <v-col lg=6 md=4 sm=2 justify="left">
